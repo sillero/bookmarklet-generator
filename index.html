@@ -3,13 +3,39 @@
 <head>
 	<title>Bookmarklet generator</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
 </head>
 
 <body class="markdown-body">
 	<div id="app">
-		<iframe src="https://codesandbox.io/embed/q4zr71q60w?hidenavigation=1&initialpath=preview.html&module=%2Fsrc%2Findex.js&moduleview=1"
-		 style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+		<h1>Bookmarklet generator</h1>
+		<p>Can't get much simpler than this.<br>No tracking or any other type of code injection</p>
+		<p>Edit the <code>bookmarklet</code> function on the <code>index.js</code> file on the left</p>
+		<p>
+			Drag this to your bookmarks bar:
+			<a id="link"></a>
+			<button id="toggleedit">Edit name</button>
+		</p>
+
+		<p>
+			<h2>Source Code:</h2>
+			<pre id="code"></pre>
+		</p>
+
+		<p>
+			<h2>Link code:</h2>
+			<pre id="hrefcode"></pre>
+		</p>
+
+		<p>
+			<h2>base64 encoded code:</h2>
+			<pre id="encoded"></pre>
+			<small>You can verify the contents by running <code>atob()</code> with this code in your browser's console</small>
+			<pre id="runencoded"></pre>
+		</p>
 	</div>
+
+	<script src="src/index.js"></script>
 </body>
 
 </html>
